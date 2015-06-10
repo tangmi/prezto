@@ -34,7 +34,8 @@ zstyle ':prezto:load' pmodule \
     'homebrew' \
     'osx' \
     'git' \
-    'subl' \
+    'sublimetext' \
+    'spacemacs' \
     'node' \
     'haskell' \
     'syntax-highlighting' \
