@@ -1,3 +1,6 @@
 *.zwc
 *.zwc.old
 modules/*/cache.zsh
+
+# this will be symlinked in
+prompt_tangmi_setup
