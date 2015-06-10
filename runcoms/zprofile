@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='vim'
+export VISUAL='vim'
 export PAGER='less'
 
 #
@@ -41,11 +41,35 @@ typeset -gU cdpath fpath mailpath path
 #   $cdpath
 # )
 
-# Set the list of directories that Zsh searches for programs.
-path=(
-  /usr/local/{bin,sbin}
-  $path
+# save any existing path so we can shove our stuff before it
+path_prev=(
+	$path
 )
+
+path=(
+    /usr/local/{bin,sbin}
+    /usr/{bin,sbin}
+    /{bin,sbin}
+    /usr/X11/bin
+    $HOME/.bin # my own binaries?
+)
+
+# source it all
+for f in $(find -L ~/.dotfiles -name \*.bash); do
+	source $f
+done
+
+# local stuff
+if [ -f ~/.zshrc.local ]; then
+  source ~/.zshrc.local
+fi
+
+# attach the previous path to the end of our path
+path=(
+	$path
+	$path_prev
+)
+
 
 #
 # Less
