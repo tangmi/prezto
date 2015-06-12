@@ -17,3 +17,6 @@ unsetopt CORRECT
 
 # magic?
 setopt ZLE
+
+# use node version
+nvm use 0.12 > /dev/null
