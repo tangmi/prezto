@@ -19,4 +19,4 @@ unsetopt CORRECT
 setopt ZLE
 
 # use node version
-nvm use 4 > /dev/null
+nvm use 6 > /dev/null
