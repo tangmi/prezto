@@ -19,4 +19,7 @@ unsetopt CORRECT
 setopt ZLE
 
 # use node version
-nvm use 6 > /dev/null
+if which nvm > /dev/null; then nvm use 6 > /dev/null; fi
+
+# use python version
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
