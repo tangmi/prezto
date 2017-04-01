@@ -93,7 +93,4 @@ fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
 
-# rust stuff (copied from rust/install.sh)
-export _TANG_RUST=${HOME}/.tang_rust
-export _TANG_RUST_REPO=${_TANG_RUST}/rust
-export RUST_SRC_PATH=${_TANG_RUST_REPO}/src
+export CARGO_HOME=$HOME/.cargo
